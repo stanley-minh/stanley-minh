@@ -1,54 +1,25 @@
-## Hi there 👋
+# Hey there! 👋
 
-My name is **Stanley**, I'm a Web & Mobile Developer student based in France.
+I'm **Stanley**, a web developer student based in Toulouse, France.
 
-🎯 Looking for an **internship starting September 2026**, then an **apprenticeship in 2027**.
+I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
 
----
+My main stack is PHP, MySQL, JavaScript, and Bootstrap. I'm most comfortable on the front-end right now — HTML, CSS, and vanilla JS — and I'm currently going deeper into the back-end: PDO, sessions, and MVC architecture.
 
-## 🛠️ Stack
+I also spend time on the parts people skip: Merise data modeling, UML, and Docker. I'd rather understand why something works than just copy a snippet that does.
+My passion is to look and learn about everything so i can be one of the most efficient person that ever exist. 
 
-| Area | Technologies |
-|---|---|
-| **Back-end** | PHP, MySQL, PDO |
-| **Front-end** | HTML5, CSS3, JavaScript, Bootstrap 5 |
-| **Databases** | Merise (conceptual & logical data models), SQL (joins, constraints, transactions) |
-| **Design** | MVC architecture, UML (use case, sequence, activity), technical specifications |
-| **Tools** | Git / GitHub, VS Code, Docker, VirtualBox, Linux |
-| **Cross-cutting** | Algorithms, OOP, web security (XSS, CSRF, SQL injection), responsive design, accessibility |
+Right now I'm working through CS50 and building my first public projects. My pinned repos are where they'll land.
 
----
+Long term, I'm aiming for a CTI-accredited engineering school through the French parallel admission track.
 
-## 📚 Current level
+## ⚡ Fun facts
 
-**Solid foundations** — Algorithms · HTML/CSS · JavaScript (DOM, events, async/fetch) · Bootstrap · Git
+- 🏀 Basketball, watches, and anything about **Space**.
+- 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
+- 📓 If it's not in my vault, it didn't happen.
 
-**Currently consolidating** — PHP (sessions, PDO, MVC) · Advanced SQL · Merise · Docker · Networking (OSI, TCP/IP)
 
-**Next up** — CS50 *Introduction to Computer Science* · TypeScript · React · Automated testing · CI/CD
 
----
 
-## 🚀 Projects
-
-| Project | Stack | Description |
-|---|---|---|
-| _coming soon_ | HTML / CSS / JS | Responsive personal portfolio |
-| _coming soon_ | PHP / MySQL / MVC | CRUD application with authentication |
-| _coming soon_ | Vanilla JS | Todo app (localStorage, filtering) |
-
----
-
-## 🎓 Long-term goal
-
-Continue into a **CTI-accredited engineering school** (French parallel admission track) after the apprenticeship.
-
-Currently working through the **CS50 — Introduction to Computer Science** problem sets, alongside certifications.
-
----
-
-## 📫 Contact
-
-- 💼 [linkedin.com/in/stancte](https://www.linkedin.com/in/stancte)
-- 📧 stanley.bullet.pro@gmail.com
-- 📍 Toulouse / Paris, France
+📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
