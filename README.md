@@ -17,7 +17,7 @@ Long term, I'm aiming for a CTI-accredited engineering school through the French
 
 - 🏀 Basketball, watches, and anything about **Space**.
 - 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
-- 📓 If it's not in my vault, it didn't happen.
+- 📓 If it's not in my vault, it didn't happen. I really want to be immortal to learn everything time is to short...
 
 
 
