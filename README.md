@@ -1,4 +1,7 @@
 # Hey there! 👋
+<div align="center">
+  <img src=".github/badges/react-atom.svg" alt="React" width="90"/>
+</div>
 I'm **Stanley**, a web developer student based in Toulouse, France.
 
 I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
