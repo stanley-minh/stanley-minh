@@ -16,16 +16,16 @@ Long term, I'm aiming for a CTI-accredited engineering school through the French
 ## Stack
 
 <p align="center">
-  <img src=".github/badges/javascript.svg" alt="JavaScript" height="34"/>
-  <img src=".github/badges/typescript.svg" alt="TypeScript" height="34"/>
-  <img src=".github/badges/react.svg" alt="React" height="34"/>
-  <img src=".github/badges/node-js.svg" alt="Node.js" height="34"/>
-  <img src=".github/badges/nestjs.svg" alt="NestJS" height="34"/>
-  <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="34"/>
-  <img src=".github/badges/mysql.svg" alt="MySQL" height="34"/>
-  <img src=".github/badges/sql.svg" alt="SQL" height="34"/>
-  <img src=".github/badges/tailwind.svg" alt="Tailwind" height="34"/>
-  <img src=".github/badges/docker.svg" alt="Docker" height="34"/>
+  <img src=".github/badges/javascript.svg" alt="JavaScript" height="26"/>
+  <img src=".github/badges/typescript.svg" alt="TypeScript" height="26"/>
+  <img src=".github/badges/react.svg" alt="React" height="26"/>
+  <img src=".github/badges/node-js.svg" alt="Node.js" height="26"/>
+  <img src=".github/badges/nestjs.svg" alt="NestJS" height="26"/>
+  <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="26"/>
+  <img src=".github/badges/mysql.svg" alt="MySQL" height="26"/>
+  <img src=".github/badges/sql.svg" alt="SQL" height="26"/>
+  <img src=".github/badges/tailwind.svg" alt="Tailwind" height="26"/>
+  <img src=".github/badges/docker.svg" alt="Docker" height="26"/>
 </p>
 
 ## 🐉 Fun facts
