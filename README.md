@@ -1,7 +1,7 @@
-# Hey there! 👋
-<div align="center">
-  <img src=".github/badges/react-atom.svg" alt="React" width="90"/>
-</div>
+<table><tr>
+<td><h1>Hey there! 👋</h1></td>
+<td><img src=".github/badges/react-atom.svg" alt="React" width="40"/></td>
+</tr></table>
 I'm **Stanley**, a web developer student based in Toulouse, France.
 
 I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
@@ -14,9 +14,6 @@ My passion is to look and learn about everything so i can be one of the most eff
 Right now I'm working through CS50 and building my first public projects. My pinned repos are where they'll land.
 
 Long term, I'm aiming for a CTI-accredited engineering school through the French parallel admission track.
-<div align="center">
-  <img src=".github/badges/react-atom.svg" alt="React" width="120"/>
-</div>
 
 ## Stack
 <p align="center"> <img src=".github/badges/javascript.svg" alt="JavaScript" height="34"/> <img src=".github/badges/typescript.svg" alt="TypeScript" height="34"/> <img src=".github/badges/react.svg" alt="React" height="34"/> <img src=".github/badges/node-js.svg" alt="Node.js" height="34"/> <img src=".github/badges/nestjs.svg" alt="NestJS" height="34"/> <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="34"/> <img src=".github/badges/mysql.svg" alt="MySQL" height="34"/> <img src=".github/badges/sql.svg" alt="SQL" height="34"/> <img src=".github/badges/tailwind.svg" alt="Tailwind" height="34"/> <img src=".github/badges/docker.svg" alt="Docker" height="34"/> </p>
