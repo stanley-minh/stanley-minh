@@ -13,6 +13,14 @@ Right now I'm working through CS50 and building my first public projects. My pin
 
 Long term, I'm aiming for a CTI-accredited engineering school through the French parallel admission track.
 
+## 🐉 Fun facts
+
+- 🌍 I want to discover and learn from every **Culture**.
+- 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
+- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all. But I don't have centuries. I have this one short life, and it's already slipping past...
+
+📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
+
 ## Stack
 
 <p align="center">
@@ -27,11 +35,3 @@ Long term, I'm aiming for a CTI-accredited engineering school through the French
   <img src=".github/badges/tailwind.svg" alt="Tailwind" height="26"/>
   <img src=".github/badges/docker.svg" alt="Docker" height="26"/>
 </p>
-
-## 🐉 Fun facts
-
-- 🌍 Basketball, watches, and anything about **Space**.
-- 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
-- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all. But I don't have centuries. I have this one short life, and it's already slipping past...
-
-📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
