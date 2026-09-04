@@ -1,7 +1,4 @@
-<table><tr>
-<td><h1>Hey there! 👋</h1></td>
-<td><img src=".github/badges/react-atom.svg" alt="React" width="40"/></td>
-</tr></table>
+# Hey there! 👋 <img src=".github/badges/react-atom.svg" width="32" align="absmiddle"/>
 I'm **Stanley**, a web developer student based in Toulouse, France.
 
 I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
