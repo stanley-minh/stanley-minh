@@ -11,7 +11,7 @@ My passion is to look and learn about everything so i can be one of the most eff
 
 Right now I'm working through CS50 and building my first public projects. My pinned repos are where they'll land.
 
-Long term, I'm aiming for a CTI-accredited engineering school through the French parallel admission track.
+Long term, I'm aiming for a engineering school.
 
 ## 🐉 Fun facts
 
