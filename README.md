@@ -2,7 +2,7 @@
 
 I'm **Stanley**, a web developer student based in Toulouse, France.
 
-I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
+I'm training as a Web & Mobile Developer, and I'm looking for an  apprenticeship in 2027.
 
 My main stack is PHP, MySQL, JavaScript, and Bootstrap. I'm most comfortable on the front-end right now — HTML, CSS, and vanilla JS — and I'm currently going deeper into the back-end: PDO, sessions, and MVC architecture.
 
