@@ -17,7 +17,7 @@ Long term, I'm aiming for a engineering school.
 
 - 🌍 I want to discover and learn from every **Culture**.
 - 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
-- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all. But I don't have centuries. I have this one short life, and it's already slipping past...
+- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all.
 
 📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
 
