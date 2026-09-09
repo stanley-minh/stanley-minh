@@ -24,6 +24,12 @@ Long term, I'm aiming for a CTI-accredited engineering school through the French
 ## Stack
 
 <p align="center">
+  <img src=".github/badges/nextjs.svg" alt="Next.js" height="26"/>
+  <img src=".github/badges/php.svg" alt="PHP" height="26"/>
+  <img src=".github/badges/symfony.svg" alt="Symfony" height="26"/>
+  <img src=".github/badges/redis.svg" alt="Redis" height="26"/>
+  <img src=".github/badges/minio.svg" alt="MinIO" height="26"/>
+  <img src=".github/badges/nginx.svg" alt="Nginx" height="26"/>
   <img src=".github/badges/javascript.svg" alt="JavaScript" height="26"/>
   <img src=".github/badges/typescript.svg" alt="TypeScript" height="26"/>
   <img src=".github/badges/react.svg" alt="React" height="26"/>
