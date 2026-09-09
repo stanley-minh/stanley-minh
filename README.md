@@ -25,16 +25,17 @@ Long term, I'm aiming for a engineering school.
 
 ## Stack
 
+## Stack
+
 <p align="center">
-  <img src=".github/badges/react.svg" alt="React" height="34"/>
-  <img src=".github/badges/nextjs.svg" alt="Next.js" height="34"/>
-  <img src=".github/badges/tailwind.svg" alt="Tailwind" height="34"/>
-  <img src=".github/badges/php.svg" alt="PHP" height="34"/>
-  <img src=".github/badges/symfony.svg" alt="Symfony" height="34"/>
-  <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="34"/>
-  <img src=".github/badges/redis.svg" alt="Redis" height="34"/>
-  <img src=".github/badges/minio.svg" alt="MinIO" height="34"/>
-  <img src=".github/badges/docker.svg" alt="Docker" height="34"/>
-  <img src=".github/badges/nginx.svg" alt="Nginx" height="34"/>
-</p>
+  <img src=".github/badges/react.svg" alt="React" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/nextjs.svg" alt="Next.js" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/tailwind.svg" alt="Tailwind" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/php.svg" alt="PHP" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/symfony.svg" alt="Symfony" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/redis.svg" alt="Redis" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/minio.svg" alt="MinIO" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/docker.svg" alt="Docker" height="34" style="margin: 0 6px;"/>
+  <img src=".github/badges/nginx.svg" alt="Nginx" height="34" style="margin: 0 6px;"/>
 </p>
