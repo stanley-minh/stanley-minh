@@ -19,9 +19,9 @@
         from="-1 0" to="1 0" dur="2.00s" repeatCount="indefinite"/>
     </linearGradient>
     <radialGradient id="sphere_minio" cx="35%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#ff899d"/>
-      <stop offset="45%" stop-color="#FF3B5C"/>
-      <stop offset="100%" stop-color="#721a29"/>
+      <stop offset="0%" stop-color="#ff89ba"/>
+      <stop offset="45%" stop-color="#FF3B8D"/>
+      <stop offset="100%" stop-color="#721a3f"/>
     </radialGradient>
   </defs>
 
@@ -33,7 +33,7 @@
     <path id="orb3_minio" d="M19,13.6 a9,3.4 0 1,0 0.1,0" transform="rotate(120 19 17)"/>
   </defs>
 
-  <g fill="none" stroke="#FF3B5C" stroke-width="1.1" opacity="0.6">
+  <g fill="none" stroke="#FF3B8D" stroke-width="1.1" opacity="0.6">
     <ellipse cx="19" cy="17" rx="9" ry="3.4"/>
     <ellipse cx="19" cy="17" rx="9" ry="3.4" transform="rotate(60 19 17)"/>
     <ellipse cx="19" cy="17" rx="9" ry="3.4" transform="rotate(120 19 17)"/>
@@ -56,6 +56,6 @@
   </circle>
 
   <text x="54" y="22" font-size="12.5"
-    font-family="Verdana,DejaVu Sans,Geneva,sans-serif" fill="#FF3B5C"
+    font-family="Verdana,DejaVu Sans,Geneva,sans-serif" fill="#FF3B8D"
     text-anchor="middle" font-weight="bold">MinIO</text>
 </svg>
