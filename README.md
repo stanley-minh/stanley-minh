@@ -21,9 +21,6 @@ Long term, I'm aiming for a engineering school.
 
 📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
 
-## Stack
-
-## Stack
 
 ## Stack
 
