@@ -23,21 +23,18 @@ Long term, I'm aiming for a engineering school.
 
 ## Stack
 
+## Stack
+
 <p align="center">
-  <img src=".github/badges/nextjs.svg?v=2" alt="Next.js" height="26"/>
-  <img src=".github/badges/php.svg?v=2" alt="PHP" height="26"/>
-  <img src=".github/badges/symfony.svg?v=2" alt="Symfony" height="26"/>
-  <img src=".github/badges/redis.svg?v=2" alt="Redis" height="26"/>
-  <img src=".github/badges/minio.svg?v=2" alt="MinIO" height="26"/>
-  <img src=".github/badges/nginx.svg?v=2" alt="Nginx" height="26"/>
-  <img src=".github/badges/javascript.svg?v=2" alt="JavaScript" height="26"/>
-  <img src=".github/badges/typescript.svg?v=2" alt="TypeScript" height="26"/>
-  <img src=".github/badges/react.svg?v=2" alt="React" height="26"/>
-  <img src=".github/badges/node-js.svg?v=2" alt="Node.js" height="26"/>
-  <img src=".github/badges/nestjs.svg?v=2" alt="NestJS" height="26"/>
-  <img src=".github/badges/postgresql.svg?v=2" alt="PostgreSQL" height="26"/>
-  <img src=".github/badges/mysql.svg?v=2" alt="MySQL" height="26"/>
-  <img src=".github/badges/sql.svg?v=2" alt="SQL" height="26"/>
-  <img src=".github/badges/tailwind.svg?v=2" alt="Tailwind" height="26"/>
-  <img src=".github/badges/docker.svg?v=2" alt="Docker" height="26"/>
+  <img src=".github/badges/react.svg" alt="React" height="34"/>
+  <img src=".github/badges/nextjs.svg" alt="Next.js" height="34"/>
+  <img src=".github/badges/tailwind.svg" alt="Tailwind" height="34"/>
+  <img src=".github/badges/php.svg" alt="PHP" height="34"/>
+  <img src=".github/badges/symfony.svg" alt="Symfony" height="34"/>
+  <img src=".github/badges/postgresql.svg" alt="PostgreSQL" height="34"/>
+  <img src=".github/badges/redis.svg" alt="Redis" height="34"/>
+  <img src=".github/badges/minio.svg" alt="MinIO" height="34"/>
+  <img src=".github/badges/docker.svg" alt="Docker" height="34"/>
+  <img src=".github/badges/nginx.svg" alt="Nginx" height="34"/>
+</p>
 </p>
