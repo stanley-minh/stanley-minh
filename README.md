@@ -2,7 +2,7 @@
 
 I'm **Stanley**, a web developer student based in Toulouse, France.
 
-I'm training as a Web & Mobile Developer, and I'm looking for an internship starting September 2026, then an apprenticeship in 2027.
+I'm training as a Web & Mobile Developer, and I'm looking for an  apprenticeship in 2027.
 
 My main stack is PHP, MySQL, JavaScript, and Bootstrap. I'm most comfortable on the front-end right now — HTML, CSS, and vanilla JS — and I'm currently going deeper into the back-end: PDO, sessions, and MVC architecture.
 
@@ -11,13 +11,13 @@ My passion is to look and learn about everything so i can be one of the most eff
 
 Right now I'm working through CS50 and building my first public projects. My pinned repos are where they'll land.
 
-Long term, I'm aiming for a CTI-accredited engineering school through the French parallel admission track.
+Long term, I'm aiming for a engineering school.
 
 ## 🐉 Fun facts
 
 - 🌍 I want to discover and learn from every **Culture**.
 - 🧠 Everything I want to learn ends up in **Obsidian** — my brain has a second, better-organized backup.
-- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all. But I don't have centuries. I have this one short life, and it's already slipping past...
+- 📓 If it's not in my vault, it never existed. Some days I feel like Frieren — wishing for an eternity just to learn it all.
 
 📫 [LinkedIn](https://www.linkedin.com/in/stancte) · stanley.bullet.pro@gmail.com
 
