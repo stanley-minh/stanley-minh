@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Structure commune à tous les badges (harmonisée le stage 2026) :
-  1. fond pilule avec reflet qui glisse (technique reprise de l'ancien javascript.svg)
-  2. anneaux fixes + 3 "boules" (électrons) indépendantes, chacune sur sa propre orbite,
-     décalées dans le temps (begin) — comme l'atome React d'origine, adapté en petit format
-  3. dégradé radial sur le noyau + les boules pour un effet sphère
+  1. fond pilule SOMBRE UNIFORME (plus de couleur de marque en fond, juste un léger
+     reflet qui glisse) — pour que les 10 badges cohabitent sans clash de couleurs
+  2. anneaux fixes + 3 "boules" (électrons) indépendantes, dans la couleur de marque
+     (accent), chacune sur sa propre orbite, décalées dans le temps
+  3. dégradé radial adouci (moins de blanc pur) sur le noyau + les boules
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="34" viewBox="0 0 76 34" role="img" aria-label="React">
   <title>React</title>
   <defs>
     <linearGradient id="g_react" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#61DAFB"/>
-      <stop offset="45%" stop-color="#b3f0ff"/>
-      <stop offset="55%" stop-color="#b3f0ff"/>
-      <stop offset="100%" stop-color="#61DAFB"/>
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="45%" stop-color="#2e2e2e"/>
+      <stop offset="55%" stop-color="#2e2e2e"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
       <animateTransform attributeName="gradientTransform" type="translate"
         from="-1 0" to="1 0" dur="2.00s" repeatCount="indefinite"/>
     </linearGradient>
     <radialGradient id="sphere_react" cx="35%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#b3f0ff"/>
+      <stop offset="0%" stop-color="#a0e8fc"/>
       <stop offset="45%" stop-color="#61DAFB"/>
-      <stop offset="100%" stop-color="#35778a"/>
+      <stop offset="100%" stop-color="#2b6270"/>
     </radialGradient>
   </defs>
 
@@ -32,7 +33,7 @@
     <path id="orb3_react" d="M19,13.6 a9,3.4 0 1,0 0.1,0" transform="rotate(120 19 17)"/>
   </defs>
 
-  <g fill="none" stroke="#003347" stroke-width="1.1" opacity="0.55">
+  <g fill="none" stroke="#61DAFB" stroke-width="1.1" opacity="0.6">
     <ellipse cx="19" cy="17" rx="9" ry="3.4"/>
     <ellipse cx="19" cy="17" rx="9" ry="3.4" transform="rotate(60 19 17)"/>
     <ellipse cx="19" cy="17" rx="9" ry="3.4" transform="rotate(120 19 17)"/>
@@ -55,6 +56,6 @@
   </circle>
 
   <text x="54" y="22" font-size="12.5"
-    font-family="Verdana,DejaVu Sans,Geneva,sans-serif" fill="#003347"
+    font-family="Verdana,DejaVu Sans,Geneva,sans-serif" fill="#61DAFB"
     text-anchor="middle" font-weight="bold">React</text>
 </svg>
