@@ -4,7 +4,7 @@ I'm **Stanley**, a web developer student based in Toulouse, France.
 
 I'm training as a Web & Mobile Developer, and I'm looking for an  apprenticeship in 2027.
 
-My main stack is PHP, MySQL, JavaScript, and Bootstrap. I'm most comfortable on the front-end right now — HTML, CSS, and vanilla JS — and I'm currently going deeper into the back-end: PDO, sessions, and MVC architecture.
+My main stack are PHP, MySQL, JavaScript, and Bootstrap. I'm most comfortable on the front-end right now — HTML, CSS, and vanilla JS — and I'm currently going deeper into the back-end: PDO, sessions, and MVC architecture.
 
 I also spend time on the parts people skip: Merise data modeling, UML, and Docker. I'd rather understand why something works than just copy a snippet that does.
 My passion is to look and learn about everything so i can be one of the most efficient person that ever exist.
