@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="34" viewBox="0 0 86 34" role="img" aria-label="Redis">
+  <title>Redis</title>
+  <!-- Généré par scripts/build-badges.mjs : modifier le script, pas ce fichier. -->
+  <style>
+    .shine { animation: shine 7s ease-in-out 4.0s infinite; }
+    @keyframes shine { 0% { transform: translateX(-40px); } 35%, 100% { transform: translateX(96px); } }
+    @media (prefers-reduced-motion: reduce) { .shine { animation: none; opacity: 0; } }
+  </style>
+  <defs>
+    <clipPath id="pill"><rect width="86" height="34" rx="17"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3e44"/><stop offset="1" stop-color="#24272b"/>
+    </linearGradient>
+    <!-- Biseau : un reflet clair sur la moitié haute donne le volume « bombé » de la pilule. -->
+    <linearGradient id="bevel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shine-band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff3cc" stop-opacity="0"/><stop offset="0.5" stop-color="#fff3cc" stop-opacity="0.35"/><stop offset="1" stop-color="#fff3cc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="petal-red" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5f100c"/><stop offset="0.55" stop-color="#8e1c16"/><stop offset="1" stop-color="#a0221b"/>
+    </linearGradient>
+    <linearGradient id="petal-gold" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#c08a2e"/><stop offset="0.5" stop-color="#f2b01e"/><stop offset="1" stop-color="#ffd873"/>
+    </linearGradient>
+    <radialGradient id="seed" cx="0.38" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#fff3cc"/><stop offset="0.45" stop-color="#ffd873"/><stop offset="1" stop-color="#f2b01e"/>
+    </radialGradient>
+    <filter id="lift" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0.5" stdDeviation="0.6" flood-color="#5f100c" flood-opacity="0.7"/>
+    </filter>
+    <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0.6" dy="1.2" stdDeviation="0.9" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <path id="outer" d="M0,-2 C-3.3,-5 -3.5,-10 0,-13.5 C3.5,-10 3.3,-5 0,-2 Z"/>
+    <path id="inner" d="M0,-1 C-2.4,-3.5 -2.6,-7.5 0,-10 C2.6,-7.5 2.4,-3.5 0,-1 Z"/>
+  </defs>
+
+  <g clip-path="url(#pill)">
+    <rect width="86" height="34" fill="url(#bg)"/>
+    <rect width="86" height="17" fill="url(#bevel)"/>
+    <rect class="shine" x="0" y="0" width="34" height="34" fill="url(#shine-band)" transform="skewX(-20)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="85" height="33" rx="16.5" fill="none" stroke="#e0b45a" stroke-opacity="0.55"/>
+
+  <g transform="translate(19 17) scale(1.2)" filter="url(#drop)">
+    <g fill="url(#petal-gold)" stroke="#5e2a10" stroke-width="0.6"><use href="#inner" transform="rotate(22.5)"/><use href="#inner" transform="rotate(67.5)"/><use href="#inner" transform="rotate(112.5)"/><use href="#inner" transform="rotate(157.5)"/><use href="#inner" transform="rotate(202.5)"/><use href="#inner" transform="rotate(247.5)"/><use href="#inner" transform="rotate(292.5)"/><use href="#inner" transform="rotate(337.5)"/></g>
+    <g filter="url(#lift)">
+      <circle r="3.4" fill="url(#seed)" stroke="#c08a2e" stroke-width="0.7"/>
+      <g fill="#c08a2e"><circle r="0.6"/><circle cx="1.7" r="0.6"/><circle cx="-1.7" r="0.6"/><circle cy="1.7" r="0.6"/><circle cy="-1.7" r="0.6"/></g>
+    </g>
+  </g>
+
+  <text x="37" y="21.5" textLength="35" lengthAdjust="spacing" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#ffd873">Redis</text>
+</svg>
