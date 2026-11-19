@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-labelledby="title">
+  <title id="title">Stanley Coute, aka Phước Lan · Full-stack web developer in training</title>
+  <!--
+    Bannière « Rồng Mai » du README de profil (version anglaise) (variante CLAIRE : la perle est un soleil d'or).
+    Mêmes tracés et mêmes couleurs que le hero du portfolio (DragonBranch.tsx, LotusSymbols.tsx, tokens.css).
+    GitHub affiche ce fichier comme une <img> : ni JavaScript ni police web. Les animations sont en CSS
+    et s'arrêtent si le visiteur a demandé moins d'animations.
+  -->
+  <style>
+    .float, .halo, .ring { transform-box: fill-box; transform-origin: center; }
+    .float { animation: float 6s ease-in-out infinite; }
+    .halo { opacity: 0.55; animation: breathe 4s ease-in-out infinite; }
+    .ring { animation: orbit 30s linear infinite; }
+    .rays { animation: twinkle 4s ease-in-out infinite; }
+    .shimmer { animation: shimmer 7s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-6px); } }
+    @keyframes breathe { 0%, 100% { transform: scale(0.88); opacity: 0.385; } 50% { transform: scale(1.08); opacity: 0.55; } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes twinkle { 50% { opacity: 0.45; } }
+    @keyframes shimmer { 50% { transform: translateX(-420px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .float, .halo, .ring, .rays, .shimmer { animation: none; }
+    }
+  </style>
+
+  <defs>
+    <clipPath id="card"><rect width="1280" height="360" rx="16" /></clipPath>
+
+    <!-- Relief des pétales : y=1 (base, dans l'ombre) → y=0 (pointe, dans la lumière). -->
+    <linearGradient id="petal-red" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5f100c" /><stop offset="0.55" stop-color="#8e1c16" /><stop offset="1" stop-color="#a0221b" />
+    </linearGradient>
+    <linearGradient id="petal-gold" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#c08a2e" /><stop offset="0.5" stop-color="#f2b01e" /><stop offset="1" stop-color="#ffd873" />
+    </linearGradient>
+    <radialGradient id="seed" cx="0.38" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#fff3cc" /><stop offset="0.45" stop-color="#ffd873" /><stop offset="1" stop-color="#f2b01e" />
+    </radialGradient>
+    <linearGradient id="bud-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c08a2e" /><stop offset="0.4" stop-color="#ffd873" /><stop offset="0.75" stop-color="#f2b01e" /><stop offset="1" stop-color="#c08a2e" />
+    </linearGradient>
+    <filter id="lift" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0.5" stdDeviation="0.6" flood-color="#5f100c" flood-opacity="0.7" />
+    </filter>
+    <filter id="lotus-shadow" filterUnits="userSpaceOnUse" x="100" y="-60" width="620" height="660">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#5f100c" flood-opacity="0.65" />
+    </filter>
+
+    <!-- Pétales du lotus : 8 extérieurs (tous les 45°), 8 intérieurs décalés de 22,5°. -->
+    <path id="outer" d="M0,-2 C-3.3,-5 -3.5,-10 0,-13.5 C3.5,-10 3.3,-5 0,-2 Z" />
+    <path id="inner" d="M0,-1 C-2.4,-3.5 -2.6,-7.5 0,-10 C2.6,-7.5 2.4,-3.5 0,-1 Z" />
+    <g id="lotus">
+      <g fill="url(#petal-red)" stroke="#ffd873" stroke-width="0.7">
+        <use href="#outer" /><use href="#outer" transform="rotate(45)" /><use href="#outer" transform="rotate(90)" /><use href="#outer" transform="rotate(135)" />
+        <use href="#outer" transform="rotate(180)" /><use href="#outer" transform="rotate(225)" /><use href="#outer" transform="rotate(270)" /><use href="#outer" transform="rotate(315)" />
+      </g>
+      <g fill="url(#petal-gold)" stroke="#5e2a10" stroke-width="0.7" filter="url(#lift)">
+        <use href="#inner" transform="rotate(22.5)" /><use href="#inner" transform="rotate(67.5)" /><use href="#inner" transform="rotate(112.5)" /><use href="#inner" transform="rotate(157.5)" />
+        <use href="#inner" transform="rotate(202.5)" /><use href="#inner" transform="rotate(247.5)" /><use href="#inner" transform="rotate(292.5)" /><use href="#inner" transform="rotate(337.5)" />
+      </g>
+      <g filter="url(#lift)">
+        <circle r="3.4" fill="url(#seed)" stroke="#c08a2e" stroke-width="0.7" />
+        <g fill="#c08a2e"><circle r="0.6" /><circle cx="1.7" r="0.6" /><circle cx="-1.7" r="0.6" /><circle cy="1.7" r="0.6" /><circle cy="-1.7" r="0.6" /></g>
+      </g>
+    </g>
+    <g id="bud" transform="scale(0.77)">
+      <path d="M0,-11 C4.6,-5.5 4.6,1.5 0,5 C-4.6,1.5 -4.6,-5.5 0,-11 Z" fill="url(#bud-gold)" stroke="#5e2a10" stroke-width="0.9" />
+      <path d="M0,-11 C2.2,-8.6 3,-6.6 3.3,-4.8 C1.2,-5.7 -1.2,-5.7 -3.3,-4.8 C-3,-6.6 -2.2,-8.6 0,-11 Z" fill="#8e1c16" stroke="#ffd873" stroke-width="0.7" />
+      <path d="M0,5 L0,10" fill="none" stroke="#c5cad0" stroke-width="1.2" />
+    </g>
+
+    <!-- La perle (variante claire : soleil d'or). -->
+    <radialGradient id="pearl-body" cx="0.38" cy="0.36" r="0.75">
+      <stop offset="0" stop-color="#fff3cc" /><stop offset="0.4" stop-color="#ffd873" /><stop offset="1" stop-color="#f2b01e" />
+    </radialGradient>
+    <radialGradient id="pearl-halo">
+      <stop offset="0.3" stop-color="#f2b01e" stop-opacity="0.5" /><stop offset="1" stop-color="#f2b01e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Reflet doré de « Phước Lan » : une bande d'or large qui glisse derrière le texte découpé. -->
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="840" y2="60">
+      <stop offset="0" stop-color="#f2b01e" /><stop offset="0.35" stop-color="#ffd873" /><stop offset="0.5" stop-color="#fff3cc" />
+      <stop offset="0.65" stop-color="#ffd873" /><stop offset="1" stop-color="#f2b01e" />
+    </linearGradient>
+    <clipPath id="alias-clip">
+      <text x="64" y="270" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="66" font-weight="800">Phước Lan</text>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1280" height="360" fill="#b3261e" />
+
+    <!-- Texte : mêmes couleurs que le hero (suong 5,7:1 et ngoc 4,8:1 sur le rouge). -->
+    <g font-family="Archivo, 'Helvetica Neue', Arial, sans-serif">
+      <text x="64" y="76" font-size="22" font-weight="500" fill="#eef0f2"><tspan fill="#ffd873" font-weight="700">Xin chào</tspan>, let me introduce myself</text>
+      <text x="64" y="158" font-size="76" font-weight="800" fill="#eef0f2">Stanley Coute</text>
+      <g fill="#ffd873"><rect x="64" y="191" width="36" height="1.5" /><rect x="186" y="191" width="36" height="1.5" /></g>
+      <text x="112" y="197" font-size="14" font-weight="600" letter-spacing="5.6" fill="#eef0f2">ALIAS</text>
+      <!-- Ombre portée rouge sombre (do-nep), comme le drop-shadow du site. -->
+      <text x="64" y="273" font-size="66" font-weight="800" fill="#8e1c16">Phước Lan</text>
+      <g clip-path="url(#alias-clip)">
+        <rect class="shimmer" x="-200" y="200" width="1240" height="90" fill="url(#gold)" />
+      </g>
+      <text x="64" y="320" font-size="24" font-weight="500" fill="#eef0f2">Full-stack web developer in training</text>
+    </g>
+
+    <!-- La branche-dragon du hero, réduite : même viewBox d'origine (0 0 600 560). -->
+    <g transform="translate(705 -5) scale(0.7)">
+      <g class="float">
+        <circle class="halo" cx="196" cy="300" r="78" fill="url(#pearl-halo)" />
+        <circle class="ring" cx="196" cy="300" r="40" fill="none" stroke="#f2b01e" stroke-width="2" stroke-dasharray="4 6" />
+        <circle cx="196" cy="300" r="28" fill="url(#pearl-body)" stroke="#7a5216" stroke-width="2" />
+        <circle cx="186" cy="290" r="6" fill="#fff3cc" />
+        <path class="rays" d="M150,262 C160,250 172,248 180,252 M240,262 C232,250 220,248 212,252 M168,348 C178,356 214,356 224,348" fill="none" stroke="#f2b01e" stroke-width="2" stroke-linecap="round" />
+      </g>
+
+      <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#5e656d" stroke-width="16" stroke-linecap="round" />
+      <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#c5cad0" stroke-width="7" stroke-linecap="round" stroke-dasharray="7 6" />
+      <path d="M470,110 C455,92 438,82 418,80 M505,250 C525,236 545,232 566,236 M518,402 C545,410 565,425 578,445 M430,445 C428,470 420,490 405,505 M300,370 C270,380 250,395 238,415" fill="none" stroke="#5e656d" stroke-width="4" stroke-linecap="round" />
+
+      <g filter="url(#lotus-shadow)">
+        <use href="#lotus" transform="translate(418 80) rotate(20) scale(2.6)" />
+        <use href="#lotus" transform="translate(455 165) rotate(-10) scale(3)" />
+        <use href="#lotus" transform="translate(566 236) rotate(35) scale(2.4)" />
+        <use href="#lotus" transform="translate(540 345) rotate(5) scale(3)" />
+        <use href="#lotus" transform="translate(578 445) rotate(-25) scale(2.2)" />
+        <use href="#lotus" transform="translate(405 505) rotate(15) scale(2.6)" />
+        <use href="#lotus" transform="translate(360 435) rotate(40) scale(2.8)" />
+        <use href="#lotus" transform="translate(238 415) rotate(-15) scale(2.4)" />
+        <use href="#lotus" transform="translate(560 24) scale(2.2)" />
+        <use href="#bud" transform="translate(500 40) scale(2)" />
+        <use href="#bud" transform="translate(470 220) scale(1.9)" />
+        <use href="#bud" transform="translate(505 395) scale(1.9)" />
+        <use href="#bud" transform="translate(320 395) scale(1.8)" />
+      </g>
+    </g>
+  </g>
+</svg>
