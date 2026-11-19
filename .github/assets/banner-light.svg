@@ -18,8 +18,21 @@
     @keyframes orbit { to { transform: rotate(360deg); } }
     @keyframes twinkle { 50% { opacity: 0.45; } }
     @keyframes shimmer { 50% { transform: translateX(-420px); } }
+    /* Entrée, comme le hero du site : le corps se dessine, les lotus éclosent, puis la perle apparaît. */
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 0; animation: draw 1.8s ease-out both; }
+    .twigs { animation: fade 0.6s ease-out 1.1s both; }
+    .appear { animation: fade 0.8s ease-out 1.9s both; }
+    .bloom, .sway { transform-box: fill-box; transform-origin: center; }
+    .bloom { animation: bloom 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+    /* Ensuite, en boucle : chaque fleur se balance à son propre rythme (durée et décalage dans style=""). */
+    .sway { animation: sway 5s ease-in-out infinite; }
+    .stem { transform-origin: 50% 100%; } /* un bourgeon se balance depuis sa tige */
+    @keyframes draw { from { stroke-dashoffset: 1; } }
+    @keyframes fade { from { opacity: 0; } }
+    @keyframes bloom { from { transform: scale(0) rotate(-60deg); } }
+    @keyframes sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
     @media (prefers-reduced-motion: reduce) {
-      .float, .halo, .ring, .rays, .shimmer { animation: none; }
+      .float, .halo, .ring, .rays, .shimmer, .draw, .twigs, .appear, .bloom, .sway { animation: none; }
     }
   </style>
 
@@ -106,6 +119,7 @@
 
     <!-- La branche-dragon du hero, réduite : même viewBox d'origine (0 0 600 560). -->
     <g transform="translate(705 -5) scale(0.7)">
+      <g class="appear">
       <g class="float">
         <circle class="halo" cx="196" cy="300" r="78" fill="url(#pearl-halo)" />
         <circle class="ring" cx="196" cy="300" r="40" fill="none" stroke="#f2b01e" stroke-width="2" stroke-dasharray="4 6" />
@@ -113,25 +127,34 @@
         <circle cx="186" cy="290" r="6" fill="#fff3cc" />
         <path class="rays" d="M150,262 C160,250 172,248 180,252 M240,262 C232,250 220,248 212,252 M168,348 C178,356 214,356 224,348" fill="none" stroke="#f2b01e" stroke-width="2" stroke-linecap="round" />
       </g>
+      </g>
 
-      <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#5e656d" stroke-width="16" stroke-linecap="round" />
-      <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#c5cad0" stroke-width="7" stroke-linecap="round" stroke-dasharray="7 6" />
-      <path d="M470,110 C455,92 438,82 418,80 M505,250 C525,236 545,232 566,236 M518,402 C545,410 565,425 578,445 M430,445 C428,470 420,490 405,505 M300,370 C270,380 250,395 238,415" fill="none" stroke="#5e656d" stroke-width="4" stroke-linecap="round" />
+      <!-- Le corps se dessine : un masque dont le trait (pathLength="1") passe de caché à entier. -->
+      <mask id="reveal" maskUnits="userSpaceOnUse" x="-100" y="-100" width="1100" height="800">
+        <path class="draw" pathLength="1" d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#fff" stroke-width="40" stroke-linecap="round" />
+      </mask>
+      <g mask="url(#reveal)">
+        <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#5e656d" stroke-width="16" stroke-linecap="round" />
+        <path d="M820,-14 C760,-4 700,10 600,20 C500,30 450,90 455,165 C460,245 545,265 540,345 C535,425 440,460 360,435 C285,410 270,330 330,300 C375,278 410,320 385,350" fill="none" stroke="#c5cad0" stroke-width="7" stroke-linecap="round" stroke-dasharray="7 6" />
+      </g>
+      <path class="twigs" d="M470,110 C455,92 438,82 418,80 M505,250 C525,236 545,232 566,236 M518,402 C545,410 565,425 578,445 M430,445 C428,470 420,490 405,505 M300,370 C270,380 250,395 238,415" fill="none" stroke="#5e656d" stroke-width="4" stroke-linecap="round" />
 
+      <!-- Les fleurs : éclosion (.bloom, une fois) puis balancement (.sway, en boucle), sur deux groupes
+           imbriqués pour que les deux animations ne se disputent pas la même propriété transform. -->
       <g filter="url(#lotus-shadow)">
-        <use href="#lotus" transform="translate(418 80) rotate(20) scale(2.6)" />
-        <use href="#lotus" transform="translate(455 165) rotate(-10) scale(3)" />
-        <use href="#lotus" transform="translate(566 236) rotate(35) scale(2.4)" />
-        <use href="#lotus" transform="translate(540 345) rotate(5) scale(3)" />
-        <use href="#lotus" transform="translate(578 445) rotate(-25) scale(2.2)" />
-        <use href="#lotus" transform="translate(405 505) rotate(15) scale(2.6)" />
-        <use href="#lotus" transform="translate(360 435) rotate(40) scale(2.8)" />
-        <use href="#lotus" transform="translate(238 415) rotate(-15) scale(2.4)" />
-        <use href="#lotus" transform="translate(560 24) scale(2.2)" />
-        <use href="#bud" transform="translate(500 40) scale(2)" />
-        <use href="#bud" transform="translate(470 220) scale(1.9)" />
-        <use href="#bud" transform="translate(505 395) scale(1.9)" />
-        <use href="#bud" transform="translate(320 395) scale(1.8)" />
+        <g class="bloom" style="animation-delay: 0.5s"><g class="sway" style="animation-duration: 5.4s; animation-delay: -0.6s"><use href="#lotus" transform="translate(560 24) scale(2.2)" /></g></g>
+        <g class="bloom" style="animation-delay: 0.6s"><g class="sway stem" style="animation-duration: 4.6s; animation-delay: -2.1s"><use href="#bud" transform="translate(500 40) scale(2)" /></g></g>
+        <g class="bloom" style="animation-delay: 0.7s"><g class="sway" style="animation-duration: 5.8s; animation-delay: -1.2s"><use href="#lotus" transform="translate(418 80) rotate(20) scale(2.6)" /></g></g>
+        <g class="bloom" style="animation-delay: 0.8s"><g class="sway" style="animation-duration: 6.2s; animation-delay: -3.4s"><use href="#lotus" transform="translate(455 165) rotate(-10) scale(3)" /></g></g>
+        <g class="bloom" style="animation-delay: 0.9s"><g class="sway stem" style="animation-duration: 4.8s; animation-delay: -0.4s"><use href="#bud" transform="translate(470 220) scale(1.9)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.0s"><g class="sway" style="animation-duration: 5.1s; animation-delay: -2.7s"><use href="#lotus" transform="translate(566 236) rotate(35) scale(2.4)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.1s"><g class="sway" style="animation-duration: 6s; animation-delay: -1.8s"><use href="#lotus" transform="translate(540 345) rotate(5) scale(3)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.2s"><g class="sway stem" style="animation-duration: 4.4s; animation-delay: -3s"><use href="#bud" transform="translate(505 395) scale(1.9)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.3s"><g class="sway" style="animation-duration: 5.6s; animation-delay: -0.9s"><use href="#lotus" transform="translate(578 445) rotate(-25) scale(2.2)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.4s"><g class="sway" style="animation-duration: 6.4s; animation-delay: -2.3s"><use href="#lotus" transform="translate(360 435) rotate(40) scale(2.8)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.5s"><g class="sway stem" style="animation-duration: 4.9s; animation-delay: -1.5s"><use href="#bud" transform="translate(320 395) scale(1.8)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.6s"><g class="sway" style="animation-duration: 5.3s; animation-delay: -3.8s"><use href="#lotus" transform="translate(238 415) rotate(-15) scale(2.4)" /></g></g>
+        <g class="bloom" style="animation-delay: 1.7s"><g class="sway" style="animation-duration: 5.9s; animation-delay: -0.2s"><use href="#lotus" transform="translate(405 505) rotate(15) scale(2.6)" /></g></g>
       </g>
     </g>
   </g>
