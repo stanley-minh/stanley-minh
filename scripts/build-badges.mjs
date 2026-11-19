@@ -1,9 +1,9 @@
 /**
  * Génère les badges « lotus » du README de profil, aux couleurs du portfolio Rồng Mai.
  *
- * Même symbolique que le parcours du portfolio : la FORME dit le statut, pas seulement la couleur.
- *  - stack    : lotus épanoui (16 pétales + graine), fond rouge
- *  - learning : lotus qui s'ouvre (anneau intérieur seul), fond graphite
+ * Deux familles, que distinguent les couleurs, le fond ET le sens de l'animation :
+ *  - stack    : lotus rouge et or, fond rouge ; anneau extérieur dans le sens horaire
+ *  - learning : lotus rose et bleu ciel, fond graphite ; même animation, inversée
  *
  * Lancer : node scripts/build-badges.mjs
  * Sortie : .github/lotus-badges/<statut>/<slug>.svg
@@ -27,12 +27,28 @@ const C = {
   doLiXi: '#b3261e', doTham: '#a0221b', doNep: '#8e1c16', doSau: '#5f100c',
   vangMai: '#f2b01e', ngoc: '#ffd873', ngocReflet: '#fff3cc', vangDat: '#c08a2e', vangKim: '#e0b45a', nauDam: '#5e2a10',
   thanChi: '#24272b', tamThep: '#2e3238', rideauBas: '#3a3e44', suong: '#eef0f2',
+  // Ajouts propres aux badges « learning » (absents de tokens.css) : rose lotus et bleu ciel.
+  rose900: '#831843', rose600: '#db2777', rose300: '#f9a8d4', rose100: '#fce7f3',
+  ciel900: '#0c4a6e', ciel600: '#0284c7', ciel300: '#7dd3fc', ciel100: '#e0f2fe',
 };
 
-/** Thème de chaque statut. Contrastes du texte : suong sur rouge ≥ 5,7:1, ngoc sur graphite ≥ 8:1. */
+/**
+ * Thème de chaque famille. Pétales : dégradé base (ombre) → milieu → pointe (lumière).
+ * Contrastes du texte : suong sur rouge ≥ 5,7:1, ciel100 sur graphite ≥ 10:1.
+ */
 const THEMES = {
-  stack: { top: C.doLiXi, bottom: C.doNep, border: C.ngoc, text: C.suong, shadow: C.doSau },
-  learning: { top: C.rideauBas, bottom: C.thanChi, border: C.vangKim, text: C.ngoc, shadow: '#000000' },
+  stack: {
+    top: C.doLiXi, bottom: C.doNep, border: C.ngoc, text: C.suong, shadow: C.doSau, lift: C.doSau,
+    outer: { stops: [C.doSau, C.doNep, C.doTham], stroke: C.ngoc },
+    inner: { stops: [C.vangDat, C.vangMai, C.ngoc], stroke: C.nauDam },
+    reversed: false,
+  },
+  learning: {
+    top: C.rideauBas, bottom: C.thanChi, border: C.ciel300, text: C.ciel100, shadow: '#000000', lift: '#000000',
+    outer: { stops: [C.rose900, C.rose600, C.rose300], stroke: C.rose100 },
+    inner: { stops: [C.ciel900, C.ciel600, C.ciel300], stroke: C.ciel900 },
+    reversed: true,
+  },
 };
 
 const HEIGHT = 34;
@@ -70,43 +86,43 @@ const SEED = `<g filter="url(#lift)">
     </g>`;
 
 /**
- * Lotus épanoui : pétales extérieurs rouges bordés d'or, anneau intérieur doré qui « flotte » au-dessus.
- * Les deux anneaux tournent en sens inverse : l'effet de profondeur vient de ce décalage.
+ * Le lotus épanoui : anneau extérieur, puis anneau intérieur qui « flotte » au-dessus, puis la graine.
+ * Les deux anneaux tournent en sens inverse l'un de l'autre : l'effet de profondeur vient de ce décalage.
  * Le filtre d'ombre est sur un groupe PARENT : l'ombre reste en bas pendant que les pétales tournent.
  */
-const BLOOM = `<g transform="translate(19 17) scale(0.95)" filter="url(#drop)">
-    <g class="spin" fill="url(#petal-red)" stroke="${C.ngoc}" stroke-width="0.7">${ring('outer', 0)}</g>
-    <g filter="url(#lift)"><g class="spin-rev" fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.7">${ring('inner', 22.5)}</g></g>
+const lotus = (t) => `<g transform="translate(19 17) scale(0.95)" filter="url(#drop)">
+    <g class="ring-out" fill="url(#petal-outer)" stroke="${t.outer.stroke}" stroke-width="0.7">${ring('outer', 0)}</g>
+    <g filter="url(#lift)"><g class="ring-in" fill="url(#petal-inner)" stroke="${t.inner.stroke}" stroke-width="0.7">${ring('inner', 22.5)}</g></g>
     ${SEED}
   </g>`;
 
-/** Lotus qui s'ouvre : seulement l'anneau intérieur, qui tourne et « respire » comme s'il s'ouvrait. */
-const OPENING = `<g transform="translate(19 17) scale(1.2)" filter="url(#drop)">
-    <g class="breathe"><g class="spin" fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.6">${ring('inner', 22.5)}</g></g>
-    ${SEED}
-  </g>`;
+/** Trois arrêts de dégradé, de la base du pétale (y=1) à sa pointe (y=0). */
+const petalGradient = (id, [base, middle, tip]) => `<linearGradient id="${id}" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="${base}"/><stop offset="0.55" stop-color="${middle}"/><stop offset="1" stop-color="${tip}"/>
+    </linearGradient>`;
 
 function badge(name, status, index) {
   const t = THEMES[status];
   const tw = textWidth(name);
   const width = TEXT_X + tw + PADDING_RIGHT;
   const r = HEIGHT / 2;
+  // « learning » = la même animation que « stack », jouée à l'envers : rotations et reflet inversés.
+  const [outDir, inDir] = t.reversed ? ['reverse', 'normal'] : ['normal', 'reverse'];
+  const [shineFrom, shineTo] = t.reversed ? [width + 10, -40] : [-40, width + 10];
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${HEIGHT}" viewBox="0 0 ${width} ${HEIGHT}" role="img" aria-label="${name}">
   <title>${name}</title>
   <!-- Généré par scripts/build-badges.mjs : modifier le script, pas ce fichier. -->
   <style>
     .shine { animation: shine 7s ease-in-out ${(index * 0.5).toFixed(1)}s infinite; }
-    @keyframes shine { 0% { transform: translateX(-40px); } 35%, 100% { transform: translateX(${width + 10}px); } }
+    @keyframes shine { 0% { transform: translateX(${shineFrom}px); } 35%, 100% { transform: translateX(${shineTo}px); } }
     /* Rotation autour du centre du lotus. Décalage négatif propre à chaque badge : ils ne tournent pas en chœur. */
-    .spin, .spin-rev, .breathe { transform-box: fill-box; transform-origin: center; }
-    .spin { animation: spin 14s linear -${(index * 1.7).toFixed(1)}s infinite; }
-    .spin-rev { animation: spin 9s linear -${(index * 1.1).toFixed(1)}s infinite reverse; }
-    .breathe { animation: breathe 3.4s ease-in-out -${(index * 0.4).toFixed(1)}s infinite; }
+    .ring-out, .ring-in { transform-box: fill-box; transform-origin: center; }
+    .ring-out { animation: spin 14s linear -${(index * 1.7).toFixed(1)}s infinite ${outDir}; }
+    .ring-in { animation: spin 9s linear -${(index * 1.1).toFixed(1)}s infinite ${inDir}; }
     @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes breathe { 0%, 100% { transform: scale(0.9); } 50% { transform: scale(1.08); } }
     @media (prefers-reduced-motion: reduce) {
       .shine { animation: none; opacity: 0; }
-      .spin, .spin-rev, .breathe { animation: none; }
+      .ring-out, .ring-in { animation: none; }
     }
   </style>
   <defs>
@@ -121,17 +137,13 @@ function badge(name, status, index) {
     <linearGradient id="shine-band" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="${C.ngocReflet}" stop-opacity="0"/><stop offset="0.5" stop-color="${C.ngocReflet}" stop-opacity="0.35"/><stop offset="1" stop-color="${C.ngocReflet}" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="petal-red" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="${C.doSau}"/><stop offset="0.55" stop-color="${C.doNep}"/><stop offset="1" stop-color="${C.doTham}"/>
-    </linearGradient>
-    <linearGradient id="petal-gold" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="${C.vangDat}"/><stop offset="0.5" stop-color="${C.vangMai}"/><stop offset="1" stop-color="${C.ngoc}"/>
-    </linearGradient>
+    ${petalGradient('petal-outer', t.outer.stops)}
+    ${petalGradient('petal-inner', t.inner.stops)}
     <radialGradient id="seed" cx="0.38" cy="0.35" r="0.7">
       <stop offset="0" stop-color="${C.ngocReflet}"/><stop offset="0.45" stop-color="${C.ngoc}"/><stop offset="1" stop-color="${C.vangMai}"/>
     </radialGradient>
     <filter id="lift" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="0.5" stdDeviation="0.6" flood-color="${C.doSau}" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="0.5" stdDeviation="0.6" flood-color="${t.lift}" flood-opacity="0.7"/>
     </filter>
     <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx="0.6" dy="1.2" stdDeviation="0.9" flood-color="${t.shadow}" flood-opacity="0.7"/>
@@ -147,7 +159,7 @@ function badge(name, status, index) {
   </g>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${HEIGHT - 1}" rx="${r - 0.5}" fill="none" stroke="${t.border}" stroke-opacity="0.55"/>
 
-  ${status === 'stack' ? BLOOM : OPENING}
+  ${lotus(t)}
 
   <text x="${TEXT_X}" y="21.5" textLength="${tw}" lengthAdjust="spacing" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="${FONT_SIZE}" font-weight="700" fill="${t.text}">${name}</text>
 </svg>
