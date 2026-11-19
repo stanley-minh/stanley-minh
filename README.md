@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://stanley-minh.github.io/portfolio/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-B3261E?style=for-the-badge&logo=githubpages&logoColor=FFD873"></a>
-  <a href="https://www.linkedin.com/in/stancte"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2E3238?style=for-the-badge"></a>
+  <a href="https://www.linkedin.com/in/stancte"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-7DD3FC?style=for-the-badge"></a>
   <a href="mailto:stanley.bullet.pro@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-2E3238?style=for-the-badge&logo=gmail&logoColor=FFD873"></a>
 </p>
 
@@ -62,4 +62,4 @@ that are useful to the people around me.
   <img alt="MySQL" src=".github/lotus-badges/learning/mysql.svg" height="34">
 </p>
 
-<sub>A full lotus means it's in my stack; an opening lotus means I'm learning it. Same symbols as on my portfolio.</sub>
+<sub>Red and gold lotus: in my stack. Pink and sky-blue lotus, spinning the other way: currently learning.</sub>
