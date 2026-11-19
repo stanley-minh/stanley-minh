@@ -69,16 +69,20 @@ const SEED = `<g filter="url(#lift)">
       <g fill="${C.vangDat}"><circle r="0.6"/><circle cx="1.7" r="0.6"/><circle cx="-1.7" r="0.6"/><circle cy="1.7" r="0.6"/><circle cy="-1.7" r="0.6"/></g>
     </g>`;
 
-/** Lotus épanoui : pétales extérieurs rouges bordés d'or, anneau intérieur doré qui « flotte » au-dessus. */
+/**
+ * Lotus épanoui : pétales extérieurs rouges bordés d'or, anneau intérieur doré qui « flotte » au-dessus.
+ * Les deux anneaux tournent en sens inverse : l'effet de profondeur vient de ce décalage.
+ * Le filtre d'ombre est sur un groupe PARENT : l'ombre reste en bas pendant que les pétales tournent.
+ */
 const BLOOM = `<g transform="translate(19 17) scale(0.95)" filter="url(#drop)">
-    <g fill="url(#petal-red)" stroke="${C.ngoc}" stroke-width="0.7">${ring('outer', 0)}</g>
-    <g fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.7" filter="url(#lift)">${ring('inner', 22.5)}</g>
+    <g class="spin" fill="url(#petal-red)" stroke="${C.ngoc}" stroke-width="0.7">${ring('outer', 0)}</g>
+    <g filter="url(#lift)"><g class="spin-rev" fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.7">${ring('inner', 22.5)}</g></g>
     ${SEED}
   </g>`;
 
-/** Lotus qui s'ouvre : seulement l'anneau intérieur, un peu plus grand pour garder la même présence. */
+/** Lotus qui s'ouvre : seulement l'anneau intérieur, qui tourne et « respire » comme s'il s'ouvrait. */
 const OPENING = `<g transform="translate(19 17) scale(1.2)" filter="url(#drop)">
-    <g fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.6">${ring('inner', 22.5)}</g>
+    <g class="breathe"><g class="spin" fill="url(#petal-gold)" stroke="${C.nauDam}" stroke-width="0.6">${ring('inner', 22.5)}</g></g>
     ${SEED}
   </g>`;
 
@@ -93,7 +97,17 @@ function badge(name, status, index) {
   <style>
     .shine { animation: shine 7s ease-in-out ${(index * 0.5).toFixed(1)}s infinite; }
     @keyframes shine { 0% { transform: translateX(-40px); } 35%, 100% { transform: translateX(${width + 10}px); } }
-    @media (prefers-reduced-motion: reduce) { .shine { animation: none; opacity: 0; } }
+    /* Rotation autour du centre du lotus. Décalage négatif propre à chaque badge : ils ne tournent pas en chœur. */
+    .spin, .spin-rev, .breathe { transform-box: fill-box; transform-origin: center; }
+    .spin { animation: spin 14s linear -${(index * 1.7).toFixed(1)}s infinite; }
+    .spin-rev { animation: spin 9s linear -${(index * 1.1).toFixed(1)}s infinite reverse; }
+    .breathe { animation: breathe 3.4s ease-in-out -${(index * 0.4).toFixed(1)}s infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes breathe { 0%, 100% { transform: scale(0.9); } 50% { transform: scale(1.08); } }
+    @media (prefers-reduced-motion: reduce) {
+      .shine { animation: none; opacity: 0; }
+      .spin, .spin-rev, .breathe { animation: none; }
+    }
   </style>
   <defs>
     <clipPath id="pill"><rect width="${width}" height="${HEIGHT}" rx="${r}"/></clipPath>

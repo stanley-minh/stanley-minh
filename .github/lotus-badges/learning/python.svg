@@ -4,7 +4,17 @@
   <style>
     .shine { animation: shine 7s ease-in-out 2.5s infinite; }
     @keyframes shine { 0% { transform: translateX(-40px); } 35%, 100% { transform: translateX(105px); } }
-    @media (prefers-reduced-motion: reduce) { .shine { animation: none; opacity: 0; } }
+    /* Rotation autour du centre du lotus. Décalage négatif propre à chaque badge : ils ne tournent pas en chœur. */
+    .spin, .spin-rev, .breathe { transform-box: fill-box; transform-origin: center; }
+    .spin { animation: spin 14s linear -8.5s infinite; }
+    .spin-rev { animation: spin 9s linear -5.5s infinite reverse; }
+    .breathe { animation: breathe 3.4s ease-in-out -2.0s infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes breathe { 0%, 100% { transform: scale(0.9); } 50% { transform: scale(1.08); } }
+    @media (prefers-reduced-motion: reduce) {
+      .shine { animation: none; opacity: 0; }
+      .spin, .spin-rev, .breathe { animation: none; }
+    }
   </style>
   <defs>
     <clipPath id="pill"><rect width="95" height="34" rx="17"/></clipPath>
@@ -45,7 +55,7 @@
   <rect x="0.5" y="0.5" width="94" height="33" rx="16.5" fill="none" stroke="#e0b45a" stroke-opacity="0.55"/>
 
   <g transform="translate(19 17) scale(1.2)" filter="url(#drop)">
-    <g fill="url(#petal-gold)" stroke="#5e2a10" stroke-width="0.6"><use href="#inner" transform="rotate(22.5)"/><use href="#inner" transform="rotate(67.5)"/><use href="#inner" transform="rotate(112.5)"/><use href="#inner" transform="rotate(157.5)"/><use href="#inner" transform="rotate(202.5)"/><use href="#inner" transform="rotate(247.5)"/><use href="#inner" transform="rotate(292.5)"/><use href="#inner" transform="rotate(337.5)"/></g>
+    <g class="breathe"><g class="spin" fill="url(#petal-gold)" stroke="#5e2a10" stroke-width="0.6"><use href="#inner" transform="rotate(22.5)"/><use href="#inner" transform="rotate(67.5)"/><use href="#inner" transform="rotate(112.5)"/><use href="#inner" transform="rotate(157.5)"/><use href="#inner" transform="rotate(202.5)"/><use href="#inner" transform="rotate(247.5)"/><use href="#inner" transform="rotate(292.5)"/><use href="#inner" transform="rotate(337.5)"/></g></g>
     <g filter="url(#lift)">
       <circle r="3.4" fill="url(#seed)" stroke="#c08a2e" stroke-width="0.7"/>
       <g fill="#c08a2e"><circle r="0.6"/><circle cx="1.7" r="0.6"/><circle cx="-1.7" r="0.6"/><circle cy="1.7" r="0.6"/><circle cy="-1.7" r="0.6"/></g>
