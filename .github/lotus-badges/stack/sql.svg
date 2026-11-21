@@ -2,12 +2,12 @@
   <title>SQL</title>
   <!-- Généré par scripts/build-badges.mjs : modifier le script, pas ce fichier. -->
   <style>
-    .shine { animation: shine 7s ease-in-out 3.0s infinite; }
+    .shine { animation: shine 7s ease-in-out 5.0s infinite; }
     @keyframes shine { 0% { transform: translateX(-40px); } 35%, 100% { transform: translateX(88px); } }
     /* Rotation autour du centre du lotus. Décalage négatif propre à chaque badge : ils ne tournent pas en chœur. */
     .ring-out, .ring-in { transform-box: fill-box; transform-origin: center; }
-    .ring-out { animation: spin 14s linear -10.2s infinite normal; }
-    .ring-in { animation: spin 9s linear -6.6s infinite reverse; }
+    .ring-out { animation: spin 14s linear -17.0s infinite normal; }
+    .ring-in { animation: spin 9s linear -11.0s infinite reverse; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @media (prefers-reduced-motion: reduce) {
       .shine { animation: none; opacity: 0; }
