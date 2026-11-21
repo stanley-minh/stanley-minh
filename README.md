@@ -6,7 +6,7 @@
 <p align="center">
   <a href="https://stanley-minh.github.io/portfolio/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-B3261E?style=for-the-badge&logo=githubpages&logoColor=FFD873"></a>
   <a href="https://www.linkedin.com/in/stancte"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-7DD3FC?style=for-the-badge"></a>
-  <a href="mailto:stanley.bullet.pro@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-2E3238?style=for-the-badge&logo=gmail&logoColor=FFD873"></a>
+  <a href="mailto:stanleybullet.pro@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-2E3238?style=for-the-badge&logo=gmail&logoColor=FFD873"></a>
 </p>
 
 ## About me
@@ -19,9 +19,12 @@ that are useful to the people around me.
 
 ## Where I'm headed
 
-- **Done:** CS50 (Harvard, online), algorithms and programming fundamentals in C and Python.
+- **Done:** web developer internship at OPTIQUAL Lab (Sept–Oct 2026), my first team experience: pull requests
+  to the staging branch, with Next.js, React, TypeScript and Symfony.
+- **Now:** CS50 (Harvard, online), algorithms and programming fundamentals in C, Python and SQL.
 - **Now:** the French professional title *Web and Mobile Web Developer* (DWWM, two years of higher education) at Studi,
-  as a work-study program. **I'm looking for a host company.**
+  as a work-study program. **I'm looking for a host company in Toulouse, available now:
+  4 days at work and 1 day of training per week.**
 - **Next:** a bachelor's degree in software design and AI, then an engineering degree specialized in AI,
   to bring AI into companies' tools and information systems.
 
@@ -38,28 +41,28 @@ that are useful to the people around me.
   <img alt="JavaScript" src=".github/lotus-badges/stack/javascript.svg" height="34">
   <img alt="TypeScript" src=".github/lotus-badges/stack/typescript.svg" height="34">
   <img alt="React" src=".github/lotus-badges/stack/react.svg" height="34">
-  <img alt="Node.js" src=".github/lotus-badges/stack/node-js.svg" height="34">
-  <img alt="PostgreSQL" src=".github/lotus-badges/stack/postgresql.svg" height="34">
-  <img alt="MongoDB" src=".github/lotus-badges/stack/mongodb.svg" height="34">
-  <img alt="SQL" src=".github/lotus-badges/stack/sql.svg" height="34">
+  <img alt="Tailwind" src=".github/lotus-badges/stack/tailwind.svg" height="34">
   <img alt="HTML5" src=".github/lotus-badges/stack/html5.svg" height="34">
   <img alt="CSS3" src=".github/lotus-badges/stack/css3.svg" height="34">
-  <img alt="Tailwind" src=".github/lotus-badges/stack/tailwind.svg" height="34">
+  <img alt="PHP" src=".github/lotus-badges/stack/php.svg" height="34">
+  <img alt="Symfony" src=".github/lotus-badges/stack/symfony.svg" height="34">
+  <img alt="MySQL" src=".github/lotus-badges/stack/mysql.svg" height="34">
+  <img alt="PostgreSQL" src=".github/lotus-badges/stack/postgresql.svg" height="34">
+  <img alt="SQL" src=".github/lotus-badges/stack/sql.svg" height="34">
+  <img alt="Docker" src=".github/lotus-badges/stack/docker.svg" height="34">
+  <img alt="Node.js" src=".github/lotus-badges/stack/node-js.svg" height="34">
 </p>
 
 ## Currently learning
 
 <p>
-  <img alt="PHP" src=".github/lotus-badges/learning/php.svg" height="34">
-  <img alt="Symfony" src=".github/lotus-badges/learning/symfony.svg" height="34">
   <img alt="NestJS" src=".github/lotus-badges/learning/nestjs.svg" height="34">
-  <img alt="Docker" src=".github/lotus-badges/learning/docker.svg" height="34">
   <img alt="GitHub Actions" src=".github/lotus-badges/learning/github-actions.svg" height="34">
   <img alt="Python" src=".github/lotus-badges/learning/python.svg" height="34">
+  <img alt="MongoDB" src=".github/lotus-badges/learning/mongodb.svg" height="34">
   <img alt="GraphQL" src=".github/lotus-badges/learning/graphql.svg" height="34">
   <img alt="Prisma" src=".github/lotus-badges/learning/prisma.svg" height="34">
   <img alt="Redis" src=".github/lotus-badges/learning/redis.svg" height="34">
-  <img alt="MySQL" src=".github/lotus-badges/learning/mysql.svg" height="34">
 </p>
 
 <sub>Red and gold lotus: in my stack. Pink and sky-blue lotus, spinning the other way: currently learning.</sub>

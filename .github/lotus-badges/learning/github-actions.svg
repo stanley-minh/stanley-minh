@@ -2,12 +2,12 @@
   <title>GitHub Actions</title>
   <!-- Généré par scripts/build-badges.mjs : modifier le script, pas ce fichier. -->
   <style>
-    .shine { animation: shine 7s ease-in-out 2.0s infinite; }
+    .shine { animation: shine 7s ease-in-out 0.5s infinite; }
     @keyframes shine { 0% { transform: translateX(156px); } 35%, 100% { transform: translateX(-40px); } }
     /* Rotation autour du centre du lotus. Décalage négatif propre à chaque badge : ils ne tournent pas en chœur. */
     .ring-out, .ring-in { transform-box: fill-box; transform-origin: center; }
-    .ring-out { animation: spin 14s linear -6.8s infinite reverse; }
-    .ring-in { animation: spin 9s linear -4.4s infinite normal; }
+    .ring-out { animation: spin 14s linear -1.7s infinite reverse; }
+    .ring-in { animation: spin 9s linear -1.1s infinite normal; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @media (prefers-reduced-motion: reduce) {
       .shine { animation: none; opacity: 0; }

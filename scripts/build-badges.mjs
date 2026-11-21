@@ -16,10 +16,16 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-/** Les technos, dans l'ordre d'affichage. Ajouter une ligne ici, puis relancer le script. */
+/**
+ * Les technos, dans l'ordre d'affichage. Ajouter une ligne ici, puis relancer le script.
+ * Règle : dans « stack », seulement ce qu'un dépôt public montre ; le reste dans « learning ».
+ */
 const BADGES = {
-  stack: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'MongoDB', 'SQL', 'HTML5', 'CSS3', 'Tailwind'],
-  learning: ['PHP', 'Symfony', 'NestJS', 'Docker', 'GitHub Actions', 'Python', 'GraphQL', 'Prisma', 'Redis', 'MySQL'],
+  stack: [
+    'JavaScript', 'TypeScript', 'React', 'Tailwind', 'HTML5', 'CSS3', // portfolio, Expense-Tracker (front)
+    'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'SQL', 'Docker', 'Node.js', // Expense-Tracker (back, v1 et v2)
+  ],
+  learning: ['NestJS', 'GitHub Actions', 'Python', 'MongoDB', 'GraphQL', 'Prisma', 'Redis'],
 };
 
 /** Palette du portfolio (tokens.css). */
