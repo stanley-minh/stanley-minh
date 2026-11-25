@@ -64,5 +64,3 @@ that are useful to the people around me.
   <img alt="Prisma" src=".github/lotus-badges/learning/prisma.svg" height="34">
   <img alt="Redis" src=".github/lotus-badges/learning/redis.svg" height="34">
 </p>
-
-<sub>Red and gold lotus: in my stack. Pink and sky-blue lotus, spinning the other way: currently learning.</sub>
